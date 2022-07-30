@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:arial;
+            margin: 0;
+        }
+        .header{
+            padding:20px;
+            text-align:center;
+            background:#1abc9c;
+            color:white;
+            font-size:20px;
+        }
+        input[type="text"],select{
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+
+        }
+        div{
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding:20px;
+
+        }
+        .prd{
+            margin: 8px 0;
+
+        }
+        .btn {
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            padding: 4px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 170px;
+        }
+        .success {
+            border-color: #ffa600;
+            color: #ffa600;
+        }
+
+        .success:hover {
+            background-color: #ffa600;
+            color: Blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Car Prediction</h1>
+    </div>
+    <div>
+      <form action="{{url_for('predict')}}" method="POST">
+          <input type="text" name="Section_width"	placeholder="Section_width"><br>
+          <input type="text" name="Width_tread"     placeholder="Width_tread"><br>
+          <input type="text" name="Outer_diameter" placeholder="Outer_diameter"><br>
+          <input type="text" name="Machine_Speed" placeholder="Machine_Speed"><br>
+
+
+          </select>
+          <button   id="sub" type="submit">SUBMIT</button>
+      </form>
+    </div>
+    <div class="prd">
+    <br><h3>{{ prediction_text }}</h3>
+    </div>
+
+</body>
+</html>

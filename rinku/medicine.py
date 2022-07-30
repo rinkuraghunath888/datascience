@@ -21,7 +21,7 @@ class Doctor:
         print(f"Dr.{self.name} consulting patient {pat.name}")
         pat.desease="fever"
         pat.medicine="parasetamole"
-d=Doctor("Ajay","ortho",250.0)
+doct=Doctor("Ajay","ortho",250.0)
 pa=Patient("Biju",34,"calicut")
-d.consult(pa)
+doct.consult(pa)
 pa.get_my_medicines()
